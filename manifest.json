@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pinterest Video Link Grabber",
+  "version": "1.0",
+  "description": "Automatically captures Pin links from the page.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.pinterest.com/pin/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
